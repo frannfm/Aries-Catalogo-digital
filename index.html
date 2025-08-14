@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aries | Librería • Juguetería • Regalería</title>
+  <meta name="description" content="Aries – Librería, Juguetería y Regalería en la peatonal de Concordia. Consultas por WhatsApp. Entre Ríos 621." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6fbff;           /* fondo claro celeste */
+      --ink:#0b2545;          /* azul profundo texto */
+      --primary:#1d4ed8;      /* azul botón */
+      --primary-2:#60a5fa;    /* celeste */
+      --card:#ffffff;         /* tarjetas */
+      --muted:#6b7a90;        /* texto suave */
+      --ring:rgba(29,78,216,.25);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--ink); background: var(--bg)}
+    a{color:var(--primary); text-decoration:none}
+    img{max-width:100%; display:block}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:40; backdrop-filter: saturate(140%) blur(10px); background: rgba(255,255,255,.7); border-bottom:1px solid rgba(13,42,69,.06)}
+    .wrap{max-width:1100px; margin:0 auto; padding:14px 18px}
+    .row{display:flex; align-items:center; justify-content:space-between; gap:14px}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700}
+    .brand img{width:42px; height:42px; object-fit:contain; border-radius:12px}
+    .brand .name{font-size:clamp(18px,2.2vw,22px); letter-spacing:.2px}
+    nav a{margin-left:16px; font-weight:600}
+
+    /* Hero */
+    .hero{padding:52px 18px 28px; background: linear-gradient(180deg, #eaf4ff 0%, #f6fbff 100%)}
+    .hero .grid{max-width:1100px; margin:0 auto; display:grid; gap:22px; grid-template-columns: repeat(auto-fit,minmax(280px,1fr))}
+    .hero h1{font-size:clamp(26px,4vw,40px); margin:0 0 10px; font-weight:800}
+    .hero p{color:var(--muted); font-size:clamp(14px,1.8vw,16px)}
+    .cta{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 16px; border-radius:14px; font-weight:700; border:1px solid rgba(13,42,69,.08); box-shadow: 0 8px 18px rgba(29,78,216,.08);}
+    .btn.primary{background:var(--primary); color:#fff; border-color:transparent}
+    .btn.ghost{background:#fff}
+
+    /* Section headers */
+    .section{padding:36px 18px}
+    .section h2{max-width:1100px; margin:0 auto 12px; font-size:clamp(20px,3vw,28px)}
+    .section p.lead{max-width:1100px; margin:0 auto 18px; color:var(--muted)}
+
+    /* Catalog grid */
+    .grid-cards{max-width:1100px; margin:0 auto; display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))}
+    .card{background:var(--card); border:1px solid rgba(13,42,69,.08); border-radius:var(--radius); overflow:hidden; box-shadow: 0 10px 25px rgba(9,30,66,.08); display:flex; flex-direction:column}
+    .thumb{aspect-ratio:4/3; width:100%; object-fit:cover; background:#e6f0ff}
+    .content{padding:14px}
+    .title{font-weight:700; font-size:16px; margin:0 0 6px}
+    .desc{color:var(--muted); font-size:14px; margin:0 0 10px; min-height:40px}
+    .meta{display:flex; align-items:center; justify-content:space-between}
+    .price{font-weight:800}
+    .chip{font-size:12px; padding:4px 8px; border:1px solid rgba(13,42,69,.12); border-radius:999px; color:var(--muted)}
+    .whats{margin:12px 0 2px; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 12px; border-radius:12px; background: linear-gradient(180deg, #22c55e, #16a34a); color:#fff; font-weight:700; border:0; box-shadow: 0 8px 18px rgba(22,163,74,.25)}
+
+    /* About */
+    .about{max-width:900px; margin:0 auto; background:var(--card); border:1px solid rgba(13,42,69,.08); border-radius:var(--radius); padding:22px; box-shadow: 0 10px 25px rgba(9,30,66,.08)}
+
+    /* Footer */
+    footer{padding:28px 18px; color:var(--muted); text-align:center}
+
+    /* Floating WA */
+    .floating-wa{position:fixed; right:16px; bottom:16px; z-index:50}
+    .floating-wa a{display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:50%; background:linear-gradient(180deg,#22c55e,#16a34a); color:#fff; font-weight:800; box-shadow:0 12px 28px rgba(22,163,74,.35)}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="wrap row">
+      <div class="brand">
+        <img src="img/logo-aries.png" alt="Logo Aries" onerror="this.style.display='none'">
+        <span class="name">Aries • Librería · Juguetería · Regalería</span>
+      </div>
+      <nav>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="grid">
+      <div>
+        <h1>Bienvenidos a <span style="font-family:'Great Vibes', cursive; font-weight:600">Aries</span></h1>
+        <p>Encuentra lo que estas buscando de <strong> forma rapida y facil de usar</strong>.No pierdas <strong> mas tiempo y hace tu consulta</strong>.</p>
+        <div class="cta">
+          <a class="btn primary" href="#catalogo">Ver catálogo</a>
+          <a class="btn ghost" href="https://www.instagram.com/aries_concordia" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn ghost" href="https://www.google.com/maps?q=Entre+Rios+621,+Concordia,+Entre+Rios+3200" target="_blank" rel="noopener">Google Maps</a>
+        </div>
+      </div>
+      <div>
+        <img src="img/hero-aries.jpg" alt="Ilustración Aries" style="border-radius:20px; border:1px solid rgba(13,42,69,.08)" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo -->
+  <section id="catalogo" class="section">
+    <h2>Catálogo</h2>
+    <p class="lead">Seleccioná un producto para consultar por WhatsApp.</p>
+
+    <div class="wrap" style="padding:0">
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px">
+        <input id="q" type="search" placeholder="Buscar…" style="flex:1; min-width:210px; padding:10px 12px; border-radius:12px; border:1px solid rgba(13,42,69,.12); outline: none; box-shadow: 0 6px 14px rgba(29,78,216,.06)" />
+        <select id="cat" style="padding:10px 12px; border-radius:12px; border:1px solid rgba(13,42,69,.12); outline:none">
+          <option value="__all__">Todas las categorías</option>
+        </select>
+      </div>
+      <div id="grid" class="grid-cards" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section id="nosotros" class="section">
+    <h2>Nosotros</h2>
+    <div class="about">
+      <p class="lead">En pleno corazón de la peatonal de Concordia, somos mucho más que una librería: Un punto de encuentro para quienes buscan productos de calidad, atención personalizada y precios justos.</p>
+      <p>Con más de 30 años de historia en la peatonal, Aries ha crecido de la mano de la comunidad concordiense, convirtiéndose en sinónimo de confianza y tradición familiar.</p>
+      <p>En nuestro local vas a encontrar:</p>
+      <ul>
+        <li>📖 <strong>Librería completa</strong> – útiles escolares, artículos de oficina, libros y material de estudio.</li>
+        <li>🧸 <strong>Juguetería</strong> – desde clásicos de siempre hasta las últimas novedades para todas las edades.</li>
+        <li>🎁 <strong>Regalería</strong> – opciones únicas para cada ocasión especial.</li>
+      </ul>
+      <p>Nuestra misión es ofrecer variedad, calidad y buen precio, acompañados de la calidez de una atención cercana que nos distingue. Creemos en construir relaciones duraderas con nuestros clientes, manteniendo siempre el respeto y la cordialidad que nos caracterizan.</p>
+      <p>📍 <strong>Dirección:</strong> Entre Ríos 621, Concordia, Entre Ríos – CP 3200<br>
+      🔗 <a href="https://www.google.com/maps?q=Entre+Rios+621,+Concordia,+Entre+Rios+3200" target="_blank" rel="noopener">Ver ubicación en Google Maps</a><br>
+      📷 Instagram: <a href="https://www.instagram.com/aries_concordia" target="_blank" rel="noopener">@aries_concordia</a></p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p class="lead">Estamos para ayudarte por WhatsApp o redes.</p>
+    <div class="wrap" style="display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:14px">
+      <a class="card" href="https://wa.me/543455414653?text=Hola!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" style="padding:16px; text-align:center">
+        <h3 style="margin:6px 0">WhatsApp</h3>
+        <p class="desc">Consulta rápida y directa. ¡Te respondemos a la brevedad!</p>
+      </a>
+      <a class="card" href="https://www.instagram.com/aries_concordia" target="_blank" rel="noopener" style="padding:16px; text-align:center">
+        <h3 style="margin:6px 0">Instagram</h3>
+        <p class="desc">Novedades, promos y productos destacados.</p>
+      </a>
+      <a class="card" href="https://www.google.com/maps?q=Entre+Rios+621,+Concordia,+Entre+Rios+3200" target="_blank" rel="noopener" style="padding:16px; text-align:center">
+        <h3 style="margin:6px 0">Cómo llegar</h3>
+        <p class="desc">Entre Ríos 621, Concordia (CP 3200).</p>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Aries — Librería, Juguetería & Regalería
+  </footer>
+
+  <div class="floating-wa">
+    <a id="wa-float" href="#" aria-label="WhatsApp">WA</a>
+  </div>
+
+  <script>
+    // Número de WhatsApp en formato internacional (sin +, espacios ni 15)
+    const PHONE = '543455414653';
+
+    // Productos de ejemplo (podés editar o sumar)
+    const PRODUCTS = [
+      { id:'JUE010', title:'Plukt! Juego Didáctico (100 piezas)', category:'Didácticos', price:'$XX.XXX', img:'img/IMG_0481.jpeg', desc:'Bloques encastrables tipo floretas. +3 años.' },
+      { id:'ESC001', title:'Cuaderno A4 Rayado 80 hojas', category:'Escolar', price:'$3.500', img:'img/cuaderno-a4.jpg', desc:'Tapa dura. Varios colores.' },
+      { id:'LIB002', title:'Cien años de soledad', category:'Libros', price:'$19.500', img:'img/cien-anos.jpg', desc:'García Márquez. Tapa blanda.' }
+    ];
+
+    const $grid = document.getElementById('grid');
+    const $q = document.getElementById('q');
+    const $cat = document.getElementById('cat');
+    const $year = document.getElementById('year');
+    $year.textContent = new Date().getFullYear();
+
+    // Rellenar categorías
+    const cats = Array.from(new Set(PRODUCTS.map(p => p.category))).sort();
+    for (const c of cats){ const o=document.createElement('option'); o.value=c; o.textContent=c; $cat.appendChild(o);} 
+
+    function waLinkFor(p){
+      const msg = `Hola! Me interesa el producto: ${p.title} (ID: ${p.id}). ¿Está disponible?`;
+      return `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
+    }
+    function cardTemplate(p){
+      const alt = `Foto de ${p.title}`;
+      return `
+      <article class="card" data-category="${p.category}">
+        <img class="thumb" src="${p.img}" alt="${alt}" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 600 450%27><rect fill=%27%23e6f0ff%27 width=%27100%25%27 height=%27100%25%27/><text x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 fill=%270b2545%27 font-size=%2720%27>Imagen no disponible</text></svg>'" />
+        <div class="content">
+          <h3 class="title">${p.title}</h3>
+          <p class="desc">${p.desc||''}</p>
+          <div class="meta">
+            <span class="price">${p.price||''}</span>
+            <span class="chip">${p.category}</span>
+          </div>
+          <a class="whats" href="${waLinkFor(p)}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        </div>
+      </article>`
+    }
+    function render(list){ $grid.innerHTML = list.length? list.map(cardTemplate).join('') : '<div class="wrap">Sin resultados.</div>'; }
+    function applyFilters(){
+      const term = ($q?.value||'').toLowerCase().trim();
+      const cat = $cat?.value||'__all__';
+      render(PRODUCTS.filter(p=> (term==='' || p.title.toLowerCase().includes(term) || (p.desc||'').toLowerCase().includes(term)) && (cat==='__all__' || p.category===cat)));
+    }
+    $q?.addEventListener('input', applyFilters);
+    $cat?.addEventListener('change', applyFilters);
+    applyFilters();
+
+    // Botón flotante WA
+    const $waFloat = document.getElementById('wa-float');
+    $waFloat.href = `https://wa.me/${PHONE}?text=${encodeURIComponent('Hola! Quiero hacer una consulta.')}`;
+    $waFloat.target = '_blank';
+    $waFloat.rel = 'noopener';
+  </script>
+</body>
+</html>
